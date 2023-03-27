@@ -1,0 +1,5 @@
+Bundle-Name: rain-rest-test
+Bundle-SymbolicName: com.liferay.rain.rest.test
+Bundle-Version: 1.0.0
+-includeresource: com.liferay.rain.rest.client.jar=../rain-rest-client/build/libs/com.liferay.rain.rest.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

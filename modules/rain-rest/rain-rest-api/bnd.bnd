@@ -1,0 +1,6 @@
+Bundle-Name: rain-rest-api
+Bundle-SymbolicName: com.liferay.rain.rest.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.rain.rest.dto.v1_0,\
+	com.liferay.rain.rest.resource.v1_0

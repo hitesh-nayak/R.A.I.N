@@ -1,0 +1,10 @@
+Bundle-Name: rain-service-api
+Bundle-SymbolicName: com.liferay.rain.service.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.rain.service.exception,\
+	com.liferay.rain.service.model,\
+	com.liferay.rain.service.service,\
+	com.liferay.rain.service.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../rain-service-service/service.xml

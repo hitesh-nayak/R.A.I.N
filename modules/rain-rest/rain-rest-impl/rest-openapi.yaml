@@ -1,0 +1,421 @@
+info:
+    description:
+        "RainRest REST API. A Java client JAR is available for use with the group ID 'com.liferay', artifact ID
+        'com.liferay.rain.rest.client', and version '1.0.0'."
+    license:
+        name: Apache 2.0
+        url: http://www.apache.org/licenses/LICENSE-2.0.html
+    title: RainRest
+    version: v1.0
+openapi: 3.0.1
+components:
+    schemas:
+        Doctor:
+            properties:
+                employeeId:
+                    format: int64
+                    type: integer
+                groupId:
+                    description:
+                        The ID of the site to which this article is scoped.
+                    format: int64
+
+                    type: integer
+
+                surname:
+                    type: string
+                firstName:
+                    type: string
+                department:
+                    type: string
+                govtId:
+                    type: string
+
+
+                nationality:
+                    type: string
+
+                payGroup:
+                    type: string
+                email:
+                    type: string
+                contactNumber:
+                    type: string
+
+
+
+        Patient:
+            properties:
+                govtId:
+                    type: string
+                groupId:
+
+                    format: int64
+                    type: integer
+                surname:
+                    type: string
+                firstName:
+                    type: string
+                nationality:
+                    type: string
+                age:
+                    format: int64
+                    type: integer
+
+                isAdult:
+                    type: boolean
+                email:
+                    type: string
+                contactNumber:
+                    type: string
+                insuranceId:
+                    type: string
+                primaryDoctor:
+                    format: int64
+                    type: integer
+
+
+paths:
+    "/doctor/{employeeId}":
+        get:
+            operationId: getDoctor
+            parameters:
+                - in: path
+                  name: employeeId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Doctor"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Doctor"
+            tags: ["Doctor"]
+
+        put:
+            operationId: putDoctor
+            parameters:
+                - in: path
+                  name: employeeId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Doctor"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Doctor"
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Doctor"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Doctor"
+            tags: ["Doctor"]
+
+        patch:
+            operationId: patchDoctor
+            parameters:
+                - in: path
+                  name: employeeId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Doctor"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Doctor"
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Doctor"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Doctor"
+            tags: ["Doctor"]
+
+        delete:
+            operationId: deleteDoctor
+            parameters:
+                - in: path
+                  name: employeeId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            responses:
+                204:
+                    description: success!
+                    content:
+                        application/json: {}
+                        application/xml: {}
+            tags: ["Doctor"]
+
+    "/doctor/{department}":
+        get:
+            operationId: getDoctorsByDept
+            parameters:
+                - in: path
+                  name: department
+                  required: true
+                  schema:
+
+                      type: string
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Doctor"
+                                type: array
+                        application/xml:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Doctor"
+                                type: array
+            tags: ["Doctor"]
+
+    "/doctor/{surname}":
+        get:
+            operationId: getDoctorsBySurname
+            parameters:
+                - in: path
+                  name: surname
+                  required: true
+                  schema:
+                      type: string
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Doctor"
+                                type: array
+                        application/xml:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Doctor"
+                                type: array
+            tags: ["Doctor"]
+    "/doctor":
+        post:
+            operationId: postDoctor
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Doctor"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Doctor"
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Doctor"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Doctor"
+            tags: ["Doctor"]
+
+
+
+    "/patient/{govtId}":
+        get:
+            operationId: getPatient
+            parameters:
+                - in: path
+                  name: govtId
+                  required: true
+                  schema:
+
+                      type: string
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Patient"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Patient"
+            tags: ["Patient"]
+
+        put:
+            operationId: putPatient
+            parameters:
+                - in: path
+                  name: govtId
+                  required: true
+                  schema:
+
+                      type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Patient"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Patient"
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Patient"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Patient"
+            tags: ["Patient"]
+
+        patch:
+            operationId: patchPatient
+            parameters:
+                - in: path
+                  name: govtId
+                  required: true
+                  schema:
+
+                      type: string
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Patient"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Patient"
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Patient"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Patient"
+            tags: ["Patient"]
+
+        delete:
+            operationId: deletePatient
+            parameters:
+                - in: path
+                  name: govtId
+                  required: true
+                  schema:
+
+                      type: string
+            responses:
+                204:
+                    description: success!
+                    content:
+                        application/json: {}
+                        application/xml: {}
+            tags: ["Patient"]
+
+    "/patient/{age}":
+        get:
+            operationId: getPatientsByAge
+            parameters:
+                - in: path
+                  name: age
+                  required: true
+                  schema:
+
+                      type: string
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Patient"
+                                type: array
+                        application/xml:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Patient"
+                                type: array
+            tags: ["Patient"]
+
+    "/patient/{surname}":
+        get:
+            operationId: getPatientsBySurname
+            parameters:
+                - in: path
+                  name: surname
+                  required: true
+                  schema:
+                      type: string
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Patient"
+                                type: array
+                        application/xml:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Patient"
+                                type: array
+            tags: ["Patient"]
+    "/patient":
+        post:
+            operationId: postPatient
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Patient"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Patient"
+            responses:
+                200:
+                    description: success!
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Patient"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Patient"
+            tags: ["Patient"]
+
+

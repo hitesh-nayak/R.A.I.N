@@ -1,0 +1,3 @@
+Bundle-Name: rain-rest-impl
+Bundle-SymbolicName: com.liferay.rain.rest.impl
+Bundle-Version: 1.0.0

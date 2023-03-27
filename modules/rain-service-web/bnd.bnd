@@ -1,0 +1,5 @@
+Bundle-Name: rain-service-web
+Bundle-SymbolicName: com.liferay.rain.service.web
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.rain.service.web.constants
+Web-ContextPath: /rain-service-web

@@ -1,0 +1,101 @@
+.board-row:after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+.status {
+	margin-bottom: 10px;
+}
+
+.square {
+	background: #FFF;
+	border: 1px solid #999;
+	float: left;
+	font-size: 24px;
+	font-weight: bold;
+	height: 34px;
+	line-height: 34px;
+	margin-right: -1px;
+	margin-top: -1px;
+	padding: 0;
+	text-align: center;
+	width: 34px;
+}
+
+.square:focus {
+	outline: none;
+}
+
+.kbd-navigation .square:focus {
+	background: #DDD;
+}
+
+.game {
+	display: flex;
+	flex-direction: row;
+}
+
+.game-info {
+	margin-left: 20px;
+}
+
+.game-info ol, .game-info ul {
+	padding-left: 30px;
+}
+
+.tag {
+	font-weight: bold; margin-right: 1em;
+}
+
+.value {
+	font-family: monospace;
+}
+
+.pre {
+	font-family: monospace; white-space: pre;
+}
+
+.docshitesh {
+	display: inline-block;
+	width: 30rem;
+	height: 30rem;
+	border: 3px solid #0b5fff;
+	border-radius: 4px;
+	margin-bottom: 5rem;
+	margin-right: 5rem;
+
+}
+
+
+
+.docimghitesh {
+	display: flex;
+	height: 20rem;
+	width: 20rem;
+	align-self: center;
+	margin-left: 5rem;
+}
+
+.articles {
+	display: inline-block;
+	width: 30rem;
+	height: 7rem;
+	border: 3px solid #0b5fff;
+	border-radius: 4px;
+	margin-bottom: 5rem;
+	margin-right: 5rem;
+
+}
+
+.articleHead {
+	display: block;
+	width: 30rem;
+	height: 7rem;
+	margin-bottom: 5px;
+
+	font-family: Courier, Lucidatypewriter, monospace;
+	font: normal 2rem/2rem Courier;
+
+	overflow: auto;
+}

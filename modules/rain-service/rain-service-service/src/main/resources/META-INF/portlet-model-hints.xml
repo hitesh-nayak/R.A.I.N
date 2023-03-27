@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.rain.service.model.Doctor">
+		<field name="employeeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="surname" type="String" />
+		<field name="firstName" type="String" />
+		<field name="department" type="String" />
+		<field name="govtId" type="String" />
+		<field name="nationality" type="String" />
+		<field name="payGroup" type="String" />
+		<field name="email" type="String" />
+		<field name="contactNumber" type="String" />
+	</model>
+	<model name="com.liferay.rain.service.model.Patient">
+		<field name="govtId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="surname" type="String" />
+		<field name="firstName" type="String" />
+		<field name="nationality" type="String" />
+		<field name="age" type="long" />
+		<field name="isAdult" type="boolean" />
+		<field name="email" type="String" />
+		<field name="contactNumber" type="String" />
+		<field name="insuranceId" type="String" />
+		<field name="primaryDoctor" type="long" />
+	</model>
+</model-hints>

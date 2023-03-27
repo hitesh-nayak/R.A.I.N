@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:rain-service:rain-service-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../rain-service-api/src/main/java"
+}
+
+group = "com.liferay.rain.service"
